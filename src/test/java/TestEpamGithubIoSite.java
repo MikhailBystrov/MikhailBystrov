@@ -57,7 +57,6 @@ public class TestEpamGithubIoSite {
         WebElement userName = driver.findElement(By.cssSelector(".profile-photo span"));
         Point point = userName.getLocation();
         Assert.assertEquals(format("(%s,%s)", point.getX(), point.getY()), "(20, 20)");
-        System.out.println(userName.getLocation());
     }
 
     //6. Assert browser title
