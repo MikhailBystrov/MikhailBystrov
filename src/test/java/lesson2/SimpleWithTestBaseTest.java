@@ -19,7 +19,7 @@ public class SimpleWithTestBaseTest extends TestBase {
     @BeforeClass
     public void beforeClass() {
         HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
-        chromePrefs.put("download.default_directory", "targer");
+        chromePrefs.put("download.default_directory", "target");
 
         options = new ChromeOptions();
         options.setExperimentalOption("prefs", chromePrefs);
@@ -33,6 +33,7 @@ public class SimpleWithTestBaseTest extends TestBase {
         driver.navigate().to("https://jdi-framework.github.io/tests/index.htm");
         Assert.assertEquals(driver.getTitle(), "Index Page");
 
+        //1 Login as user
         WebElement userIcon = driver.findElement(By.cssSelector(".fa-user"));
         userIcon.click();
 
@@ -40,6 +41,7 @@ public class SimpleWithTestBaseTest extends TestBase {
         driver.findElement(By.cssSelector("#Password")).sendKeys("1234");
         driver.findElement(By.cssSelector(".form-horizontal button[type = 'submit']")).click();
 
+        //2 Assert ...
         WebElement userName = driver.findElement(By.cssSelector(".profile-photo span"));
         Assert.assertTrue(userName.isDisplayed());
         Assert.assertEquals(userName.getText(), "PITER CHAILOVSKII");
@@ -55,6 +57,7 @@ public class SimpleWithTestBaseTest extends TestBase {
         driver.navigate().to("https://jdi-framework.github.io/tests/index.htm");
         Assert.assertEquals(driver.getTitle(), "Index Page");
 
+        //1 Login as user
         WebElement userIcon = driver.findElement(By.cssSelector(".fa-user"));
         userIcon.click();
 
@@ -62,6 +65,7 @@ public class SimpleWithTestBaseTest extends TestBase {
         driver.findElement(By.cssSelector("#Password")).sendKeys("1234");
         driver.findElement(By.cssSelector(".form-horizontal button[type = 'submit']")).click();
 
+        //2 Assert ...
         WebElement userName = driver.findElement(By.cssSelector(".profile-photo span"));
         Assert.assertTrue(userName.isDisplayed());
         Assert.assertEquals(userName.getText(), "PITER CHAILOVSKII");
@@ -77,6 +81,7 @@ public class SimpleWithTestBaseTest extends TestBase {
         driver.navigate().to("https://jdi-framework.github.io/tests/index.htm");
         Assert.assertEquals(driver.getTitle(), "Index Page");
 
+        //1 Login as user
         WebElement userIcon = driver.findElement(By.cssSelector(".fa-user"));
         userIcon.click();
 
@@ -84,6 +89,7 @@ public class SimpleWithTestBaseTest extends TestBase {
         driver.findElement(By.cssSelector("#Password")).sendKeys("1234");
         driver.findElement(By.cssSelector(".form-horizontal button[type = 'submit']")).click();
 
+        //2 Assert ...
         WebElement userName = driver.findElement(By.cssSelector(".profile-photo span"));
         Assert.assertTrue(userName.isDisplayed());
         Assert.assertEquals(userName.getText(), "PITER CHAILOVSKII");

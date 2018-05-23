@@ -3,7 +3,8 @@ package base;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-public abstract class TestBase {
+public class TestBase {
+
     private long initTime;
 
     @BeforeSuite
