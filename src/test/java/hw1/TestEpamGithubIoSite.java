@@ -1,4 +1,4 @@
-package homeWork.hw1;
+package hw1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
