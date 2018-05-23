@@ -1,3 +1,5 @@
+package homeWork.hw1;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
