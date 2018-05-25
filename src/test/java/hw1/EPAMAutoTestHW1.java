@@ -34,22 +34,22 @@ public class EPAMAutoTestHW1 {
         driver.findElement(By.cssSelector("#Password")).sendKeys("1234");
         driver.findElement(By.cssSelector(".form-horizontal button[type = 'submit']")).click();
         assertEquals(driver.findElement(By.cssSelector(".profile-photo span")).getText(), "PITER CHAILOVSKII");
-//6. Assert browser title
+//5. Assert browser title
         assertEquals(driver.getTitle(), "Home Page");
-//7. Assert that there are 4 items on the header section are displayed and they have proper texts
+//6. Assert that there are 4 items on the header section are displayed and they have proper texts
         List<WebElement> headerElements = driver.findElements(By.cssSelector(".nav > li"));
         assertEquals(headerElements.size(), 4);
         assertEquals(headerElements.get(0).getText(), "HOME");
         assertEquals(headerElements.get(1).getText(), "CONTACT FORM");
         assertEquals(headerElements.get(2).getText(), "SERVICE");
         assertEquals(headerElements.get(3).getText(), "METALS & COLORS");
-//8. Assert that there are 4 images on the Index Page and they are displayed
+//7. Assert that there are 4 images on the Index Page and they are displayed
         List<WebElement> allImages = driver.findElements(By.className("benefit"));
         assertEquals(allImages.size(), 4);
         for (WebElement element : allImages) {
             assertTrue(element.findElement(By.className("benefit-icon")).isDisplayed());
         }
-//9. Assert that there are 4 texts on the Index Page under icons and they have proper text
+//8. Assert that there are 4 texts on the Index Page under icons and they have proper text
         List<WebElement> benefit = driver.findElements(By.className("benefit"));
         assertEquals(benefit.size(), 4);
         assertEquals(benefit.get(0).getText(), "To include good practices\n" +
@@ -62,7 +62,7 @@ public class EPAMAutoTestHW1 {
                 "(about 20 internal and\n" +
                 "some external projects),\n" +
                 "wish to get more…");
-//10. Assert a text of the main header
+//9. Assert a text of the main header
         WebElement text = driver.findElement(By.cssSelector(".main-title"));
         assertEquals(text.getText(), "EPAM FRAMEWORK WISHES…");
         WebElement secondText = driver.findElement(By.cssSelector(".main-txt"));
@@ -70,13 +70,13 @@ public class EPAMAutoTestHW1 {
                 "SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, " +
                 "QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT DUIS AUTE IRURE " +
                 "DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR.");
-//11. Assert a text of the sub header
+//10. Assert a text of the sub header
         assertEquals(driver.findElement(By.cssSelector(".text-center > a")).getText(), "JDI GITHUB");
-//12. Assert that JDI GITHUB is a link and has a proper URL
+//11. Assert that JDI GITHUB is a link and has a proper URL
         assertEquals(driver.findElement(By.linkText("JDI GITHUB")).getAttribute("href"), "https://github.com/epam/JDI");
-//13. Assert that there is Left Section
+//12. Assert that there is Left Section
         assertTrue(driver.findElement(By.name("navigation-sidebar")).isDisplayed());
-//14. Assert that there is Footer
+//13. Assert that there is Footer
         assertTrue(driver.findElement(By.className("footer-bg")).isDisplayed());
     }
 }
