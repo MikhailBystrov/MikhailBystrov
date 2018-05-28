@@ -40,7 +40,7 @@ public class SimpleWithAnnotationsTest {
 
     @Test
     public void simpleSeleniumTest() {
-        driver.navigate().to("https://jdi-framework.github.io/tests/index.htm");
+        driver.navigate().to("https://epam.github.io/JDI/index.html");
         Assert.assertEquals(driver.getTitle(), "Index Page");
 
         //1 Login as user

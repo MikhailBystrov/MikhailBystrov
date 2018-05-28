@@ -23,7 +23,7 @@ public class SimpleTest {
 
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        driver.navigate().to("https://jdi-framework.github.io/tests/index.htm");
+        driver.navigate().to("https://epam.github.io/JDI/index.html");
         Assert.assertEquals(driver.getTitle(), "Index Page");
 
         WebElement userIcon = driver.findElement(By.cssSelector(".fa-user"));
