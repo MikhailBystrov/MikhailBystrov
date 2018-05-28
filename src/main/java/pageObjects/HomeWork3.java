@@ -27,6 +27,9 @@ public class HomeWork3 {
     @FindBy(css = ".form-horizontal button[type = 'submit']")
     private WebElement submitButton;
 
+    @FindBy(css = ".profile-photo span")
+    private WebElement profilePhoto;
+
     @FindBy(xpath = "//header//nav//a[text() = 'Home']")
     private WebElement headerElementHome;
 
@@ -97,6 +100,10 @@ public class HomeWork3 {
         submitButton.click();
     }
 
+    public void checkUserIsLoggined() {
+        assertEquals(profilePhoto.getText(), "PITER CHAILOVSKII");
+    }
+
     public void checkHeaderSection(WebDriver driver, int numberOfElements) {
         List<WebElement> headerElements = driver.findElements(By.cssSelector(".nav > li"));
         assertEquals(headerElements.size(), numberOfElements);
@@ -130,7 +137,7 @@ public class HomeWork3 {
                 "wish to get more…");
     }
 
-    public void checkTextOfMainContent(WebDriver driver) {
+    public void checkTextOfMainContent() {
         assertEquals(mainContentTitle.getText(), "EPAM FRAMEWORK WISHES…");
         assertEquals(mainContentText.getText(), "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, " +
                 "SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, " +
@@ -138,19 +145,19 @@ public class HomeWork3 {
                 "DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR.");
     }
 
-    public void checkTextOfSubHeader(WebDriver driver, String text) {
+    public void checkTextOfSubHeader(String text) {
         assertEquals(subHeaderText.getText(), text);
     }
 
-    public void checkJDIGITHUBIsALink(WebDriver driver, String url) {
+    public void checkJDIGITHUBIsALink(String url) {
         assertEquals(subHeaderText.getAttribute("href"), url);
     }
 
-    public void checkThereIsLeftSection(WebDriver driver) {
+    public void checkThereIsLeftSection() {
         assertTrue(leftSection.isDisplayed());
     }
 
-    public void checkThereIsFooter(WebDriver driver) {
+    public void checkThereIsFooter() {
         assertTrue(footer.isDisplayed());
     }
 }
