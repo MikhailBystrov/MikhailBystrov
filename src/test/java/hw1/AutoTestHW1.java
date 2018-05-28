@@ -71,10 +71,9 @@ public class AutoTestHW1 {
                 "wish to get more…");
 
         //9. Assert a text of the main header
-        WebElement text = driver.findElement(By.cssSelector(".main-title"));
-        assertEquals(text.getText(), "EPAM FRAMEWORK WISHES…");
-        WebElement secondText = driver.findElement(By.cssSelector(".main-txt"));
-        assertEquals(secondText.getText(), "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, " +
+        assertEquals(driver.findElement(By.cssSelector(".main-title")).getText(), "EPAM FRAMEWORK WISHES…");
+        assertEquals(driver.findElement(By.cssSelector(".main-txt")).getText(),
+                "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, " +
                 "SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, " +
                 "QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT DUIS AUTE IRURE " +
                 "DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR.");
