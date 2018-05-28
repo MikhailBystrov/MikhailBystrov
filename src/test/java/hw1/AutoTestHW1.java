@@ -70,7 +70,7 @@ public class AutoTestHW1 {
                 "some external projects),\n" +
                 "wish to get more…");
 
-        //9. Assert a text of the main header
+        //9. Assert a text of the main content
         assertEquals(driver.findElement(By.cssSelector(".main-title")).getText(), "EPAM FRAMEWORK WISHES…");
         assertEquals(driver.findElement(By.cssSelector(".main-txt")).getText(),
                 "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, " +
