@@ -31,7 +31,7 @@ public class Exercise extends TestBase {
 
     @Test
     public void testEPAMGithubIoSite() {
-        homeWork3.open(driver);
+        homeWork3.open(driver, "https://epam.github.io/JDI/index.html");
 
         //2. Assert test site is open
         homeWork3.checkSiteOpen(driver, "https://epam.github.io/JDI/index.html");

@@ -78,8 +78,8 @@ public class HomeWork3 {
     @FindBy(css = "div[class = 'footer-bg']")
     private WebElement footer;
 
-    public void open(WebDriver driver) {
-        driver.navigate().to("https://epam.github.io/JDI/index.html");
+    public void open(WebDriver driver, String siteURL) {
+        driver.navigate().to(siteURL);
     }
 
     public void checkSiteOpen(WebDriver driver, String expectedURL) {
