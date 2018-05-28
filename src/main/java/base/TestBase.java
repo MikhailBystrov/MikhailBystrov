@@ -1,5 +1,6 @@
 package base;
 
+import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -10,6 +11,12 @@ public class TestBase {
     @BeforeSuite
     public void beforeSuite() {
         initTime = System.currentTimeMillis();
+
+        Configuration.browser = "chrome";
+        Configuration.screenshots = false;
+        Configuration.timeout = 10000;
+        Configuration.pollingInterval = 200;
+        Configuration.collectionsPollingInterval = 350;
     }
 
     @AfterSuite
