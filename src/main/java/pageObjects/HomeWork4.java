@@ -59,8 +59,8 @@ public class HomeWork4 {
         submitButton.click();
     }
 
-    public void checkUserIsLoggined() {
-        assertEquals(profilePhoto.getText(), "PITER CHAILOVSKII");
+    public void checkUserIsLoggined(String name) {
+        assertEquals(profilePhoto.getText(), name);
     }
 
     public void openDatesPage() {

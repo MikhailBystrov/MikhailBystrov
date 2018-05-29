@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.HomeWork4;
 
+import static enums.Users.PITER_CHAILOVSKII;
+
 /**
  * Created by Mikhail on Май, 2018
  */
@@ -38,10 +40,10 @@ public class TestDatesPageElements extends TestBase {
         homeWork4.checkHomePageTitle(driver, "Home Page");
 
         //3. Perform login.
-        homeWork4.login("epam", "1234");
+        homeWork4.login(PITER_CHAILOVSKII.login, PITER_CHAILOVSKII.password);
 
         //4. Assert User name in the right-top side of screen that user is loggined
-        homeWork4.checkUserIsLoggined();
+        homeWork4.checkUserIsLoggined(PITER_CHAILOVSKII.name);
 
         //5. Open through the header menu Service -> Dates Page
         homeWork4.openDatesPage();
