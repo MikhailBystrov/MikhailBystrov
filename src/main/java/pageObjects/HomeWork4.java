@@ -82,7 +82,6 @@ public class HomeWork4 {
                 actions.sendKeys(Keys.ARROW_RIGHT).build().perform();
             }
         }
-        System.out.println("Ola" + leftSlider.getAttribute("style"));
     }
 
     public void moveRightSliderRange2(WebDriver driver, int position) {
