@@ -31,13 +31,13 @@ public class SimpleWithTestBaseTest extends TestBase {
         driver.manage().window().maximize();
 
         driver.navigate().to("https://epam.github.io/JDI/index.html");
-        Assert.assertEquals(driver.getTitle(), "Index Page");
+        Assert.assertEquals(driver.getTitle(), "Home Page");
 
         //1 Login as user
-        WebElement userIcon = driver.findElement(By.cssSelector(".fa-user"));
+        WebElement userIcon = driver.findElement(By.cssSelector(".profile-photo"));
         userIcon.click();
 
-        driver.findElement(By.cssSelector("#Login")).sendKeys("epam");
+        driver.findElement(By.cssSelector("#Name")).sendKeys("epam");
         driver.findElement(By.cssSelector("#Password")).sendKeys("1234");
         driver.findElement(By.cssSelector(".form-horizontal button[type = 'submit']")).click();
 
@@ -55,13 +55,13 @@ public class SimpleWithTestBaseTest extends TestBase {
         driver.manage().window().maximize();
 
         driver.navigate().to("https://epam.github.io/JDI/index.html");
-        Assert.assertEquals(driver.getTitle(), "Index Page");
+        Assert.assertEquals(driver.getTitle(), "Home Page");
 
         //1 Login as user
-        WebElement userIcon = driver.findElement(By.cssSelector(".fa-user"));
+        WebElement userIcon = driver.findElement(By.cssSelector(".profile-photo"));
         userIcon.click();
 
-        driver.findElement(By.cssSelector("#Login")).sendKeys("epam");
+        driver.findElement(By.cssSelector("#Name")).sendKeys("epam");
         driver.findElement(By.cssSelector("#Password")).sendKeys("1234");
         driver.findElement(By.cssSelector(".form-horizontal button[type = 'submit']")).click();
 
@@ -79,13 +79,13 @@ public class SimpleWithTestBaseTest extends TestBase {
         driver.manage().window().maximize();
 
         driver.navigate().to("https://epam.github.io/JDI/index.html");
-        Assert.assertEquals(driver.getTitle(), "Index Page");
+        Assert.assertEquals(driver.getTitle(), "Home Page");
 
         //1 Login as user
-        WebElement userIcon = driver.findElement(By.cssSelector(".fa-user"));
+        WebElement userIcon = driver.findElement(By.cssSelector(".profile-photo"));
         userIcon.click();
 
-        driver.findElement(By.cssSelector("#Login")).sendKeys("epam");
+        driver.findElement(By.cssSelector("#Name")).sendKeys("epam");
         driver.findElement(By.cssSelector("#Password")).sendKeys("1234");
         driver.findElement(By.cssSelector(".form-horizontal button[type = 'submit']")).click();
 

@@ -41,7 +41,7 @@ public class SimpleWithAnnotationsTest {
     @Test
     public void simpleSeleniumTest() {
         driver.navigate().to("https://epam.github.io/JDI/index.html");
-        Assert.assertEquals(driver.getTitle(), "Index Page");
+        Assert.assertEquals(driver.getTitle(), "Home Page");
 
         //1 Login as user
         WebElement userIcon = driver.findElement(By.cssSelector(".fa-user"));
