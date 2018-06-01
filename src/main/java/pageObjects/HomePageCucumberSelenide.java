@@ -8,14 +8,19 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.page;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Created by Mikhail on 31.05.2018
+ * Created by Danila_Morokov on 5/23/2018.
  */
 public class HomePageCucumberSelenide {
+
+    public HomePageCucumberSelenide() {
+        page(this);
+    }
 
     @FindBy(css = ".profile-photo")
     private SelenideElement userIcon;
