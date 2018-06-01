@@ -15,10 +15,10 @@ public class DataProviderTest {
     @DataProvider(parallel = true)
     public Object[][] simpleDataProvider() {
         return new Object[][]{
-                {0, "1st image"},
-                {1, "2nd image"},
-                {2, "3rd image"},
-                {3, "4th image"}
+                {0, "1st text"},
+                {1, "2nd text"},
+                {2, "3rd text"},
+                {3, "4th text"}
         };
     }
 
