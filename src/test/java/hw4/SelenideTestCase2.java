@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.page;
 import static enums.Users.PITER_CHAILOVSKII;
 
 /**
- * Created by Mikhail on Май, 2018
+ * Created by Mikhail
  */
 public class SelenideTestCase2 {
 

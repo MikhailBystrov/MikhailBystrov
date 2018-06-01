@@ -1,7 +1,7 @@
 package enums;
 
 /**
- * Created by Mikhail on Май, 2018
+ * Created by Mikhail
  */
 public enum Users {
 

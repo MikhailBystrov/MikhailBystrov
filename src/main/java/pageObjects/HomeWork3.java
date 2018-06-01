@@ -11,7 +11,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Created by Mikhail on Май, 2018
+ * Created by Mikhail
  */
 public class HomeWork3 {
 

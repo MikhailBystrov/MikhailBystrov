@@ -19,7 +19,7 @@ import java.util.HashMap;
 import static java.lang.System.setProperty;
 
 /**
- * Created by Mikhail on Май, 2018
+ * Created by Mikhail
  */
 public class SimpleTestWithAnnotations {
     private WebDriver driver;

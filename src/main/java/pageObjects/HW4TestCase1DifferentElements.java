@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 /**
- * Created by Mikhail on Май, 2018
+ * Created by Mikhail
  */
 public class HW4TestCase1DifferentElements {
 

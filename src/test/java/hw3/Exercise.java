@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import pageObjects.HomeWork3;
 
 /**
- * Created by Mikhail on Май, 2018
+ * Created by Mikhail
  */
 public class Exercise extends TestBase {
 
