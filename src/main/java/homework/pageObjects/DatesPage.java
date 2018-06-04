@@ -28,7 +28,7 @@ public class DatesPage {
         double sliderWidth = range2Slider.getSize().getWidth();
         int leftSliderCurrPosition = Integer.parseInt(leftSliderSpan.getText());
         int rightSliderCurrPosition = Integer.parseInt(rightSliderSpan.getText());
-        if(leftSliderPosition >= rightSliderCurrPosition) {
+        if (leftSliderPosition >= rightSliderCurrPosition) {
             Selenide.actions().dragAndDropBy(rightSlider, (int) (sliderWidth * (rightSliderPosition - rightSliderCurrPosition - 1) / 100), 0)
                     .build().perform();
             Selenide.actions().dragAndDropBy(leftSlider, (int) (sliderWidth * (leftSliderPosition - leftSliderCurrPosition - 1) / 100), 0)

@@ -10,7 +10,7 @@ public class HomeWork4Base {
 
     @BeforeSuite
     public void beforeSuite() {
-        Configuration.browser ="chrome";
+        Configuration.browser = "chrome";
         Configuration.screenshots = false;
     }
 }
