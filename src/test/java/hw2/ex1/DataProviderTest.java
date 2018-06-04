@@ -4,33 +4,43 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.List;
+
+import static org.testng.Assert.assertEquals;
 
 public class DataProviderTest {
 
     @DataProvider(parallel = true)
     public Object[][] simpleDataProvider() {
         return new Object[][]{
-                {0, "1st text"},
-                {1, "2nd text"},
-                {2, "3rd text"},
-                {3, "4th text"}
+                {1, "To include good practices\n" +
+                        "and ideas from successful\n" +
+                        "EPAM project"},
+                {2, "To be flexible and\n" +
+                        "customizable"},
+                {3, "To be multiplatform"},
+                {4, "Already have good base\n" +
+                        "(about 20 internal and\n" +
+                        "some external projects),\n" +
+                        "wish to get more…"}
         };
     }
 
     @Test(dataProvider = "simpleDataProvider")
-    public void testWithDataProvider(int i, String s) {
+    public void testWithDataProvider(int textNumber, String text) {
+
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
+
+        //1 Open test site by URL
         driver.navigate().to("https://epam.github.io/JDI/index.html");
 
-        List<WebElement> benefit = driver.findElements(By.className("benefit"));
-        WebElement childText = benefit.get(i).findElement(By.className("benefit-txt"));
-        Assert.assertTrue(childText.isDisplayed());
+        //2 Check 4 texts below 4 pictures on the Index Page
+        List<WebElement> benefit = driver.findElements(By.cssSelector(".benefit-txt"));
+        assertEquals(benefit.get(textNumber - 1).getText(), text);
 
         driver.close();
     }
