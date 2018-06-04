@@ -1,4 +1,4 @@
-package enums;
+package lessons.enums;
 
 /**
  * Created by Mikhail

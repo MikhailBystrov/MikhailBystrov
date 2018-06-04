@@ -1,40 +1,37 @@
-package pageObjects;
+package lessons.pageObjects;
 
 import com.codeborne.selenide.SelenideElement;
-import io.qameta.allure.Step;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Created by Mikhail on 5/23/2018.
+ * Created by Danila_Morokov on 5/23/2018.
  */
-public class HomePageSelenide {
+public class HomePage {
 
     @FindBy(css = ".profile-photo")
-    private SelenideElement userIcon;
+    private WebElement userIcon;
 
     @FindBy(css = "#Name")
-    private SelenideElement loginInput;
+    private WebElement loginInput;
 
     @FindBy(css = "#Password")
-    private SelenideElement passwordInput;
+    private WebElement passwordInput;
 
     @FindBy(css = ".form-horizontal button[type = 'submit']")
-    private SelenideElement submitButton;
+    private WebElement submitButton;
 
     @FindBy(css = ".profile-photo span")
     private SelenideElement userName;
 
-    @Step
-    public void openHomePage() {
-        open("https://epam.github.io/JDI/index.html");
+    public void openHomePage(WebDriver driver) {
+        driver.navigate().to("https://epam.github.io/JDI/index.html");
     }
 
-    @Step("Login")
     public void login(String login, String password) {
         userIcon.click();
         loginInput.sendKeys(login);
@@ -42,13 +39,11 @@ public class HomePageSelenide {
         submitButton.click();
     }
 
-    @Step
-    public void checkHomePageTitle() {
-        assertEquals(getWebDriver().getTitle(), "Home Page");
+    public void checkHomePageTitle(WebDriver driver) {
+        assertEquals(driver.getTitle(), "Home Page");
     }
 
-    @Step
-    public void checkUserName() {
+    public void checkUserIcon() {
         assertTrue(userName.isDisplayed());
     }
 }

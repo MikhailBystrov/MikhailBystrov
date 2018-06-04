@@ -1,4 +1,4 @@
-package pageObjects;
+package lessons.pageObjects;
 
 import com.codeborne.selenide.SelenideElement;
 import cucumber.api.java.en.Given;

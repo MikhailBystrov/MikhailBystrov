@@ -1,4 +1,4 @@
-package base;
+package lessons.base;
 
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterSuite;
