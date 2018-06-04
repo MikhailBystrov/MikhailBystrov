@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import static com.codeborne.selenide.Condition.text;
 
 /**
- * Created by Mikhail on Май, 2018
+ * Created by Mikhail on May, 2018
  */
 public class DatesPage {
 
