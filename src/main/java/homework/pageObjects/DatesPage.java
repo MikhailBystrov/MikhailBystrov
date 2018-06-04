@@ -2,21 +2,27 @@ package homework.pageObjects;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
 
 /**
  * Created by Mikhail on Май, 2018
  */
 public class DatesPage {
 
-    private SelenideElement leftSlider = $("a[style^='left:']:first-child");
-    private SelenideElement leftSliderSpan = $("a[style^='left:']:first-child span");
-    private SelenideElement rightSlider = $("a[style^='left:']:last-child");
-    private SelenideElement rightSliderSpan = $("a[style^='left:']:last-child span");
-    private SelenideElement logRows = $(".info-panel-body-log > .info-panel-section");
-    private SelenideElement range2Slider = $("div .uui-slider");
+    @FindBy(css = "a[style^='left:']:first-child")
+    private SelenideElement leftSlider;
+    @FindBy(css = "a[style^='left:']:first-child span")
+    private SelenideElement leftSliderSpan;
+    @FindBy(css = "a[style^='left:']:last-child")
+    private SelenideElement rightSlider;
+    @FindBy(css = "a[style^='left:']:last-child span")
+    private SelenideElement rightSliderSpan;
+    @FindBy(css = ".info-panel-body-log > .info-panel-section")
+    private SelenideElement logRows;
+    @FindBy(css = "div .uui-slider")
+    private SelenideElement range2Slider;
 
     public void moveSlidersRange2(int leftSliderPosition, int rightSliderPosition) {
         double sliderWidth = range2Slider.getSize().getWidth();
