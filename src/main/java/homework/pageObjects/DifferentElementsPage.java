@@ -7,6 +7,8 @@ import homework.enums.ColorsDropDown;
 import homework.enums.RadioButtons;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -22,12 +24,15 @@ public class DifferentElementsPage {
     private ElementsCollection diffElementsPageRadios;
     @FindBy(css = "div.main-content-hg .uui-button")
     private ElementsCollection diffElementsPageCheckButtons;
+    @FindBy(css = ".logs li")
+    private List<SelenideElement> logRows;
     @FindBy(css = ".colors")
     private SelenideElement diffElementsPageDropDown;
     @FindBy(css = "div[name='log-sidebar']")
     private SelenideElement rightSection;
     @FindBy(css = "div[name='navigation-sidebar']")
     private SelenideElement leftSection;
+
     @FindBy(css = ".label-checkbox:nth-child(1)")
     private SelenideElement checkboxWater;
     @FindBy(css = ".label-checkbox:nth-child(2)")
@@ -36,6 +41,7 @@ public class DifferentElementsPage {
     private SelenideElement checkboxWind;
     @FindBy(css = ".label-checkbox:nth-child(4)")
     private SelenideElement checkboxFire;
+
     @FindBy(css = ".label-radio:nth-child(1)")
     private SelenideElement goldRadio;
     @FindBy(css = ".label-radio:nth-child(2)")
@@ -44,6 +50,7 @@ public class DifferentElementsPage {
     private SelenideElement bronzeRadio;
     @FindBy(css = ".label-radio:nth-child(4)")
     private SelenideElement selenRadio;
+
     @FindBy(css = "select option:nth-child(1)")
     private SelenideElement dropDownColorRed;
     @FindBy(css = "select option:nth-child(2)")
@@ -52,8 +59,6 @@ public class DifferentElementsPage {
     private SelenideElement dropDownColorBlue;
     @FindBy(css = "select option:nth-child(4)")
     private SelenideElement dropDownColorYellow;
-    @FindBy(css = ".info-panel-body-log > .info-panel-section")
-    private SelenideElement logRows;
 
     public void checkDiffElementsPageInterface() {
         diffElementsPageCheckBoxes.shouldHave(size(4));
@@ -89,8 +94,9 @@ public class DifferentElementsPage {
         }
     }
 
-    public void checkLogRowsForCheckbox(CheckBoxes checkBoxes, Boolean state) {
-        logRows.shouldHave(text(checkBoxes.name), text(state.toString()));
+    public void checkLogRowsForCheckbox(int rowNumber, CheckBoxes checkBoxes, Boolean state) {
+        System.out.println(logRows.toString());
+        logRows.get(rowNumber - 1).shouldHave(text(checkBoxes.name + ": condition changed to " + state.toString()));
     }
 
     public void selectRadio(RadioButtons radioButtons) {
@@ -111,8 +117,9 @@ public class DifferentElementsPage {
         }
     }
 
-    public void checkLogRowsForRadioButton(RadioButtons radioButtons) {
-        logRows.shouldHave(text(radioButtons.name));
+    public void checkLogRowsForRadioButton(int rowNumber, RadioButtons radioButtons) {
+        System.out.println(logRows.toString());
+        logRows.get(rowNumber - 1).shouldHave(text("metal: value changed to " + radioButtons.name));
     }
 
     public void selectInDropDown(ColorsDropDown color) {
@@ -134,8 +141,8 @@ public class DifferentElementsPage {
         }
     }
 
-    public void checkLogRowsForColorsDropDown(ColorsDropDown color) {
-        logRows.shouldHave(text(color.name));
+    public void checkLogRowsForColorsDropDown(int rowNumber, ColorsDropDown color) {
+        logRows.get(rowNumber - 1).shouldHave(text("Colors: value changed to " + color.name));
     }
 }
 

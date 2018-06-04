@@ -69,20 +69,20 @@ public class SelenideTestCase1 extends HomeWork4Base {
 
         //13. Assert that for each checkbox there is an individual log row
         // and value is corresponded to the status of checkbox. 
-        differentElementsPage.checkLogRowsForCheckbox(WIND, true);
-        differentElementsPage.checkLogRowsForCheckbox(WATER, true);
+        differentElementsPage.checkLogRowsForCheckbox(2, WATER, true);
+        differentElementsPage.checkLogRowsForCheckbox(1, WIND, true);
 
         //14. Select radio
         differentElementsPage.selectRadio(SELEN);
 
         //15. Assert that for radiobutton there is a log row and value is corresponded to the status of radiobutton. 
-        differentElementsPage.checkLogRowsForRadioButton(SELEN);
+        differentElementsPage.checkLogRowsForRadioButton(1, SELEN);
 
         //16. Select in dropdown
         differentElementsPage.selectInDropDown(GREEN);
 
         //17. Assert that for dropdown there is a log row and value is corresponded to the selected value. 
-        differentElementsPage.checkLogRowsForColorsDropDown(GREEN);
+        differentElementsPage.checkLogRowsForColorsDropDown(1, GREEN);
 
         //18. Unselect and assert checkboxes
         differentElementsPage.selectCheckboxes(WATER);
@@ -90,7 +90,7 @@ public class SelenideTestCase1 extends HomeWork4Base {
 
         //19. Assert that for each checkbox there is an individual log row
         // and value is corresponded to the status of checkbox. 
-        differentElementsPage.checkLogRowsForCheckbox(WIND, false);
-        differentElementsPage.checkLogRowsForCheckbox(WATER, false);
+        differentElementsPage.checkLogRowsForCheckbox(2, WATER, false);
+        differentElementsPage.checkLogRowsForCheckbox(1, WIND, false);
     }
 }
