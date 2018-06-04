@@ -1,9 +1,9 @@
 package lesson4;
 
-import base.TestBase;
+import lessons.base.TestBase;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.SelenideElement;
-import listeners.AllureAttachmentListener;
+import lessons.listeners.AllureAttachmentListener;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static enums.Users.PITER_CHAILOVSKII;
+import static lessons.enums.Users.PITER_CHAILOVSKII;
 
 
 @Listeners({AllureAttachmentListener.class})

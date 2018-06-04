@@ -1,6 +1,6 @@
 package lesson3;
 
-import base.TestBase;
+import lessons.base.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageObjects.HomePage;
+import lessons.pageObjects.HomePage;
 
 import java.util.HashMap;
 

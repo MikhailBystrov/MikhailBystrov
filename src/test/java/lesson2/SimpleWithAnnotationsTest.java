@@ -16,7 +16,7 @@ import java.util.HashMap;
 public class SimpleWithAnnotationsTest {
 
     private ChromeOptions options;
-    private  WebDriver driver;
+    private WebDriver driver;
 
     @BeforeClass
     public void beforeClass() {

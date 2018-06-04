@@ -1,16 +1,16 @@
 package lesson5;
 
-import base.TestBase;
+import lessons.base.TestBase;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Flaky;
 import io.qameta.allure.Story;
-import listeners.AllureAttachmentListener;
+import lessons.listeners.AllureAttachmentListener;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pageObjects.HomePageSelenide;
+import lessons.pageObjects.HomePageSelenide;
 
 import static com.codeborne.selenide.Selenide.page;
 

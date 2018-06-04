@@ -18,7 +18,7 @@ public class SimpleWithDataProviderTest {
 
     @DataProvider
     public Object[][] simpleDataProvider() {
-        return new Object[][] {
+        return new Object[][]{
                 {1, "String1"},
                 {2, "String2"},
                 {3, "String3"}
