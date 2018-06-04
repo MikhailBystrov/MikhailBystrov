@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
+import static homework.enums.CheckBoxes.EARTH;
 import static homework.enums.CheckBoxes.WATER;
 import static homework.enums.CheckBoxes.WIND;
 import static homework.enums.ColorsDropDown.GREEN;
@@ -34,7 +35,7 @@ public class HW4FailedTest extends HomeWork4Base {
         open("https://epam.github.io/JDI/index.html");
 
         //2. Assert browser title
-        homePageSelenide.checkHomePageTitle("WRONG Page");
+        homePageSelenide.checkHomePageTitle("Home Page");
 
         //3. Perform login.
         homePageSelenide.login(PITER_CHAILOVSKII);
@@ -85,7 +86,7 @@ public class HW4FailedTest extends HomeWork4Base {
         differentElementsPage.checkLogRowsForColorsDropDown(GREEN);
 
         //18. Unselect and assert checkboxes
-        differentElementsPage.selectCheckboxes(WATER);
+        differentElementsPage.selectCheckboxes(EARTH); //WATER is right
         differentElementsPage.selectCheckboxes(WIND);
 
         //19. Assert that for each checkbox there is an individual log row
