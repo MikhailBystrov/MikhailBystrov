@@ -95,7 +95,6 @@ public class DifferentElementsPage {
     }
 
     public void checkLogRowsForCheckbox(int rowNumber, CheckBoxes checkBoxes, Boolean state) {
-        System.out.println(logRows.toString());
         logRows.get(rowNumber - 1).shouldHave(text(checkBoxes.name + ": condition changed to " + state.toString()));
     }
 
@@ -118,7 +117,6 @@ public class DifferentElementsPage {
     }
 
     public void checkLogRowsForRadioButton(int rowNumber, RadioButtons radioButtons) {
-        System.out.println(logRows.toString());
         logRows.get(rowNumber - 1).shouldHave(text("metal: value changed to " + radioButtons.name));
     }
 
