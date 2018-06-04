@@ -1,16 +1,16 @@
-package homework.pageObjects;
+package homework.hw3.pageObjects;
 
-import homework.enums.TextsUnderImages;
-import homework.enums.TopHeader;
-import homework.enums.Users;
+import homework.hw3.enums.TextsUnderImages;
+import homework.hw3.enums.TopHeader;
+import homework.hw3.enums.Users;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-import static homework.enums.MainHeader.MAIN_CONTENT_TEXT;
-import static homework.enums.MainHeader.MAIN_CONTENT_TITLE;
+import static homework.hw3.enums.MainHeader.MAIN_CONTENT_TEXT;
+import static homework.hw3.enums.MainHeader.MAIN_CONTENT_TITLE;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 

@@ -1,4 +1,4 @@
-package homework.pageObjects;
+package homework.hw4.pageObjects;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;

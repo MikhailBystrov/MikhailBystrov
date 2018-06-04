@@ -1,6 +1,6 @@
 package hw3;
 
-import homework.pageObjects.HomePageSelenium;
+import homework.hw3.pageObjects.HomePageSelenium;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static homework.enums.Users.PITER_CHAILOVSKII;
+import static homework.hw3.enums.Users.PITER_CHAILOVSKII;
 
 /**
  * Created by Mikhail

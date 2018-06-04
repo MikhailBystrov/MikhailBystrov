@@ -1,4 +1,4 @@
-package homework.enums;
+package homework.hw3.enums;
 
 /**
  * Created by Mikhail

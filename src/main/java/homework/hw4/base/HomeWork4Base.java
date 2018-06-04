@@ -1,4 +1,4 @@
-package homework.base;
+package homework.hw4.base;
 
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeSuite;

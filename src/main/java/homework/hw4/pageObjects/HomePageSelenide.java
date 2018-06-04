@@ -1,8 +1,8 @@
-package homework.pageObjects;
+package homework.hw4.pageObjects;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import homework.enums.Users;
+import homework.hw4.enums.Users;
 import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.CollectionCondition.size;

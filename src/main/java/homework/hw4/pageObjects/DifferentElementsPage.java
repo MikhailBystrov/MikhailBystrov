@@ -1,10 +1,10 @@
-package homework.pageObjects;
+package homework.hw4.pageObjects;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import homework.enums.CheckBoxes;
-import homework.enums.ColorsDropDown;
-import homework.enums.RadioButtons;
+import homework.hw4.enums.CheckBoxes;
+import homework.hw4.enums.ColorsDropDown;
+import homework.hw4.enums.RadioButtons;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;

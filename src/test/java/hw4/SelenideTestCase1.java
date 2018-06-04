@@ -1,18 +1,18 @@
 package hw4;
 
-import homework.base.HomeWork4Base;
-import homework.pageObjects.DifferentElementsPage;
-import homework.pageObjects.HomePageSelenide;
+import homework.hw4.base.HomeWork4Base;
+import homework.hw4.pageObjects.DifferentElementsPage;
+import homework.hw4.pageObjects.HomePageSelenide;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
-import static homework.enums.CheckBoxes.WATER;
-import static homework.enums.CheckBoxes.WIND;
-import static homework.enums.ColorsDropDown.GREEN;
-import static homework.enums.RadioButtons.SELEN;
-import static homework.enums.Users.PITER_CHAILOVSKII;
+import static homework.hw4.enums.CheckBoxes.WATER;
+import static homework.hw4.enums.CheckBoxes.WIND;
+import static homework.hw4.enums.ColorsDropDown.GREEN;
+import static homework.hw4.enums.RadioButtons.SELEN;
+import static homework.hw4.enums.Users.PITER_CHAILOVSKII;
 
 /**
  * Created by Mikhail on 31.05.2018

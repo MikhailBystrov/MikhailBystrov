@@ -1,14 +1,14 @@
 package hw4;
 
-import homework.base.HomeWork4Base;
-import homework.pageObjects.DatesPage;
-import homework.pageObjects.HomePageSelenide;
+import homework.hw4.base.HomeWork4Base;
+import homework.hw4.pageObjects.DatesPage;
+import homework.hw4.pageObjects.HomePageSelenide;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
-import static homework.enums.Users.PITER_CHAILOVSKII;
+import static homework.hw4.enums.Users.PITER_CHAILOVSKII;
 
 /**
  * Created by Mikhail
