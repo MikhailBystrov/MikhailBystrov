@@ -10,6 +10,7 @@ import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.open;
 
 /**
  * Created by Mikhail on 01.06.2018
@@ -26,11 +27,9 @@ public class HomePageSelenide {
     private SelenideElement passwordInput;
     @FindBy(css = (".form-horizontal button[type = 'submit']"))
     private SelenideElement submitButton;
-    @FindBy(css = (".profile-photo span"))
-    private SelenideElement profilePhoto;
 
     @FindBy(css = (".main-title"))
-    private SelenideElement homePageTitleCenterText;
+    private SelenideElement homePageCenterText;
     @FindBy(css = (".main-txt"))
     private SelenideElement homePageSecondCenterText;
     @FindBy(css = ("div.row div.benefit-icon"))
@@ -48,8 +47,12 @@ public class HomePageSelenide {
     private ElementsCollection dropDownOptions;
 
 
-    public void checkHomePageTitle(String title) {
-        pageTitle.shouldHave(attribute("text", title));
+    public void openSite() {
+        open("https://epam.github.io/JDI/index.html");
+    }
+
+    public void checkHomePageTitle() {
+        pageTitle.shouldHave(attribute("text", "Home Page"));
     }
 
     public void login(Users users) {
@@ -60,13 +63,13 @@ public class HomePageSelenide {
     }
 
     public void checkUserIsLoggined(Users users) {
-        profilePhoto.shouldHave(text(users.name));
+        userIcon.shouldHave(text(users.name));
     }
 
     public void checkHomePageInterface() {
         homePageImages.shouldHave(size(4));
         homePageText.shouldHave(size(4));
-        homePageTitleCenterText.shouldBe(visible);
+        homePageCenterText.shouldBe(visible);
         homePageSecondCenterText.shouldBe(visible);
     }
 
