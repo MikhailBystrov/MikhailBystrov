@@ -69,9 +69,5 @@ public class TestDatesPage extends HomeWork5Base {
 
         //12. Set Range sliders. left sliders - the most left position, right slider - the most left position.
         datesPage.moveSlidersRange2(30, 70);
-
-        //13. Assert that for "From" and "To" sliders there are logs rows with corresponding values
-        datesPage.checkLogRowsForSliders("(From):30");
-        datesPage.checkLogRowsForSliders("(To):70");
     }
 }
