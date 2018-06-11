@@ -54,7 +54,7 @@ public class DifferentElementsPage {
     }
 
     @Step("Click on a certain checkbox on different elements page")
-    public void selectCheckboxes(homework.hw4.enums.CheckBoxes checkBoxes) {
+    public void selectCheckboxes(CheckBoxes checkBoxes) {
         String xPath = "//label[contains(.,'" + checkBoxes.name + "')]";
         SelenideElement checkBox = $x(xPath);
         checkBox.click();
@@ -66,7 +66,7 @@ public class DifferentElementsPage {
     }
 
     @Step("Click on a certain radio button on different elements page")
-    public void selectRadio(homework.hw4.enums.RadioButtons radioButton) {
+    public void selectRadio(RadioButtons radioButton) {
         String xPath = "//label[contains(.,'" + radioButton.name + "')]";
         SelenideElement radio = $x(xPath);
         radio.click();
@@ -78,7 +78,7 @@ public class DifferentElementsPage {
     }
 
     @Step("Click on the dropdown menu and choose the color")
-    public void selectInDropDown(homework.hw4.enums.ColorsDropDown color) {
+    public void selectInDropDown(ColorsDropDown color) {
         diffElementsPageDropDown.click();
         String xPath = "//select/option[text()='" + color.name + "']";
         SelenideElement colorButton = $x(xPath);
