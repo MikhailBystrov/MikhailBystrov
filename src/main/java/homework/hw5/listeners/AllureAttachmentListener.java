@@ -32,6 +32,5 @@ public class AllureAttachmentListener extends TestListenerAdapter {
 
     @Override
     public void onTestSuccess(ITestResult tr) {
-        makeScreenshot();
     }
 }
