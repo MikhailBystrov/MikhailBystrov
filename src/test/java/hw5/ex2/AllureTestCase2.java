@@ -30,7 +30,7 @@ public class AllureTestCase2 extends HomeWork4Base {
         homePageSelenide = page(HomePageSelenide.class);
     }
 
-    @Test
+    @Test(description = "Test 'Dates' page sliders")
     public void testDatesSliderAndLogRows() {
         //1. Open test site
         homePageSelenide.openSite();
