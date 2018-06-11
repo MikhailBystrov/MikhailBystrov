@@ -5,7 +5,8 @@
     <test name="Test scope 1" >
 
         <classes>
-            <class name="hw5.HW4FailedTest"/>
+            <class name="hw5.ex1.TestDifferentElementsFailed"/>
+            <class name="hw5.ex1.TestDatesPage"/>
         </classes>
 
     </test>
