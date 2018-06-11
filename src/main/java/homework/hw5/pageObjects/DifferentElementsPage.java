@@ -13,6 +13,7 @@ import java.util.List;
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$x;
 
 /**
  * Created by Mikhail
@@ -34,33 +35,6 @@ public class DifferentElementsPage {
     @FindBy(css = "div[name='navigation-sidebar']")
     private SelenideElement leftSection;
 
-    @FindBy(css = ".label-checkbox:nth-child(1)")
-    private SelenideElement checkboxWater;
-    @FindBy(css = ".label-checkbox:nth-child(2)")
-    private SelenideElement checkboxEarth;
-    @FindBy(css = ".label-checkbox:nth-child(3)")
-    private SelenideElement checkboxWind;
-    @FindBy(css = ".label-checkbox:nth-child(4)")
-    private SelenideElement checkboxFire;
-
-    @FindBy(css = ".label-radio:nth-child(1)")
-    private SelenideElement goldRadio;
-    @FindBy(css = ".label-radio:nth-child(2)")
-    private SelenideElement silverRadio;
-    @FindBy(css = ".label-radio:nth-child(3)")
-    private SelenideElement bronzeRadio;
-    @FindBy(css = ".label-radio:nth-child(4)")
-    private SelenideElement selenRadio;
-
-    @FindBy(css = "select option:nth-child(1)")
-    private SelenideElement dropDownColorRed;
-    @FindBy(css = "select option:nth-child(2)")
-    private SelenideElement dropDownColorGreen;
-    @FindBy(css = "select option:nth-child(3)")
-    private SelenideElement dropDownColorBlue;
-    @FindBy(css = "select option:nth-child(4)")
-    private SelenideElement dropDownColorYellow;
-
     @Step("Checking the presence of page items such as 4 checkboxes, 4 radios, 2 buttons and 1 dropdown")
     public void checkDiffElementsPageInterface() {
         diffElementsPageCheckBoxes.shouldHave(size(4));
@@ -80,23 +54,10 @@ public class DifferentElementsPage {
     }
 
     @Step("Click on a certain checkbox on different elements page")
-    public void selectCheckboxes(CheckBoxes checkBoxes) {
-        switch (checkBoxes.name) {
-            case "Water":
-                checkboxWater.click();
-                break;
-            case "Earth":
-                checkboxEarth.click();
-                break;
-            case "Wind":
-                checkboxWind.click();
-                break;
-            case "Fire":
-                checkboxFire.click();
-                break;
-            default:
-                break;
-        }
+    public void selectCheckboxes(homework.hw4.enums.CheckBoxes checkBoxes) {
+        String xPath = "//label[contains(.,'" + checkBoxes.name + "')]";
+        SelenideElement checkBox = $x(xPath);
+        checkBox.click();
     }
 
     @Step("Checking that the log row describes state and name of a certain check box")
@@ -105,22 +66,10 @@ public class DifferentElementsPage {
     }
 
     @Step("Click on a certain radio button on different elements page")
-    public void selectRadio(RadioButtons radioButtons) {
-        switch (radioButtons.name) {
-            case "Gold":
-                goldRadio.click();
-            case "Silver":
-                silverRadio.click();
-                break;
-            case "Bronze":
-                bronzeRadio.click();
-                break;
-            case "Selen":
-                selenRadio.click();
-                break;
-            default:
-                break;
-        }
+    public void selectRadio(homework.hw4.enums.RadioButtons radioButton) {
+        String xPath = "//label[contains(.,'" + radioButton.name + "')]";
+        SelenideElement radio = $x(xPath);
+        radio.click();
     }
 
     @Step("Checking that the log row have a right text about chosen radio button")
@@ -129,23 +78,11 @@ public class DifferentElementsPage {
     }
 
     @Step("Click on the dropdown menu and choose the color")
-    public void selectInDropDown(ColorsDropDown color) {
+    public void selectInDropDown(homework.hw4.enums.ColorsDropDown color) {
         diffElementsPageDropDown.click();
-        switch (color.name) {
-            case "Red":
-                dropDownColorRed.click();
-            case "Green":
-                dropDownColorGreen.click();
-                break;
-            case "Blue":
-                dropDownColorBlue.click();
-                break;
-            case "Yellow":
-                dropDownColorYellow.click();
-                break;
-            default:
-                break;
-        }
+        String xPath = "//select/option[text()='" + color.name + "']";
+        SelenideElement colorButton = $x(xPath);
+        colorButton.click();
     }
 
     @Step("Checking that the log row have correct name of color from dropdown menu")

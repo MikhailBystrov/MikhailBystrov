@@ -26,8 +26,6 @@ public class HomePageSelenide {
     private SelenideElement passwordInput;
     @FindBy(css = (".form-horizontal button[type = 'submit']"))
     private SelenideElement submitButton;
-    @FindBy(css = (".profile-photo span"))
-    private SelenideElement profilePhoto;
 
     @FindBy(css = (".main-title"))
     private SelenideElement homePageTitleCenterText;
@@ -60,7 +58,7 @@ public class HomePageSelenide {
     }
 
     public void checkUserIsLoggined(Users users) {
-        profilePhoto.shouldHave(text(users.name));
+        userIcon.shouldHave(text(users.name));
     }
 
     public void checkHomePageInterface() {
