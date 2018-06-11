@@ -1,5 +1,6 @@
-out/
+.out/
 .idea/
 *.iml
 *.exe
-target/
+.target/
+.allure/
