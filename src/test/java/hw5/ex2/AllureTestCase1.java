@@ -1,8 +1,8 @@
 package hw5.ex2;
 
-import homework.hw4.base.HomeWork4Base;
-import homework.hw4.pageObjects.DifferentElementsPage;
-import homework.hw4.pageObjects.HomePageSelenide;
+import homework.hw5.base.HomeWork5Base;
+import homework.hw5.pageObjects.DifferentElementsPage;
+import homework.hw5.pageObjects.HomePageSelenide;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import homework.hw5.listeners.AllureAttachmentListener;
@@ -11,19 +11,19 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.page;
-import static homework.hw4.enums.CheckBoxes.WATER;
-import static homework.hw4.enums.CheckBoxes.WIND;
-import static homework.hw4.enums.ColorsDropDown.GREEN;
-import static homework.hw4.enums.RadioButtons.SELEN;
-import static homework.hw4.enums.Users.PITER_CHAILOVSKII;
+import static homework.hw5.enums.CheckBoxes.WATER;
+import static homework.hw5.enums.CheckBoxes.WIND;
+import static homework.hw5.enums.ColorsDropDown.GREEN;
+import static homework.hw5.enums.RadioButtons.SELEN;
+import static homework.hw5.enums.Users.PITER_CHAILOVSKII;
 
 /**
  * Created by Mikhail on 31.05.2018
  */
-@Feature("Different elements page test")
+@Feature("Different elements page")
 @Story("Check interface and content")
 @Listeners({AllureAttachmentListener.class})
-public class AllureTestCase1 extends HomeWork4Base {
+public class AllureTestCase1 extends HomeWork5Base {
 
     private DifferentElementsPage differentElementsPage;
     private HomePageSelenide homePageSelenide;

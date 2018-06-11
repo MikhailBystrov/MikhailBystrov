@@ -10,7 +10,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 import static homework.hw5.enums.CheckBoxes.WATER;
 import static homework.hw5.enums.CheckBoxes.WIND;
@@ -39,10 +38,10 @@ public class TestDifferentElementsFailed extends HomeWork5Base {
     @Test(description = "Test 'Different Elements' page content")
     public void testDiffElementsButtonsAndLogRows() {
         //1. Open test site
-        open("https://epam.github.io/JDI/index.html");
+        homePageSelenide.openSite();
 
         //2. Assert browser title
-        homePageSelenide.checkHomePageTitle("Home Page");
+        homePageSelenide.checkHomePageTitle();
 
         //3. Perform login.
         homePageSelenide.login(PITER_CHAILOVSKII);

@@ -1,8 +1,8 @@
 package hw5.ex2;
 
-import homework.hw4.base.HomeWork4Base;
-import homework.hw4.pageObjects.DatesPage;
-import homework.hw4.pageObjects.HomePageSelenide;
+import homework.hw5.base.HomeWork5Base;
+import homework.hw5.pageObjects.DatesPage;
+import homework.hw5.pageObjects.HomePageSelenide;
 import homework.hw5.listeners.AllureAttachmentListener;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -11,15 +11,15 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.page;
-import static homework.hw4.enums.Users.PITER_CHAILOVSKII;
+import static homework.hw5.enums.Users.PITER_CHAILOVSKII;
 
 /**
  * Created by Mikhail
  */
-@Feature("Different elements page test")
+@Feature("Different elements page")
 @Story("Check slider and log rows working capacity")
 @Listeners({AllureAttachmentListener.class})
-public class AllureTestCase2 extends HomeWork4Base {
+public class AllureTestCase2 extends HomeWork5Base {
 
     private DatesPage datesPage;
     private HomePageSelenide homePageSelenide;

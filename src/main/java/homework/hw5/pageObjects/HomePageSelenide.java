@@ -3,6 +3,7 @@ package homework.hw5.pageObjects;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import homework.hw5.enums.Users;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.CollectionCondition.size;
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.open;
 
 /**
  * Created by Mikhail on 01.06.2018
@@ -45,11 +47,17 @@ public class HomePageSelenide {
     @FindBy(css = (".dropdown-menu li > a"))
     private ElementsCollection dropDownOptions;
 
-
-    public void checkHomePageTitle(String title) {
-        pageTitle.shouldHave(attribute("text", title));
+    @Step("Open test site")
+    public void openSite() {
+        open("https://epam.github.io/JDI/index.html");
     }
 
+    @Step("Check page title")
+    public void checkHomePageTitle() {
+        pageTitle.shouldHave(attribute("text", "Home Page"));
+    }
+
+    @Step("Login to the site")
     public void login(Users users) {
         userIcon.click();
         loginInput.sendKeys(users.login);
@@ -57,10 +65,12 @@ public class HomePageSelenide {
         submitButton.click();
     }
 
+    @Step("Check user is loggined")
     public void checkUserIsLoggined(Users users) {
         userIcon.shouldHave(text(users.name));
     }
 
+    @Step("Check page interface")
     public void checkHomePageInterface() {
         homePageImages.shouldHave(size(4));
         homePageText.shouldHave(size(4));
@@ -68,19 +78,23 @@ public class HomePageSelenide {
         homePageSecondCenterText.shouldBe(visible);
     }
 
+    @Step("Open dropdown menu 'Service'")
     public void openDropDownMenuService() {
         serviceDropDown.click();
     }
 
+    @Step("Check dropdown's options")
     public void checkDropDownContainsOptions() {
         dropDownOptions.shouldHave(texts("SUPPORT", "DATES", "COMPLEX TABLE",
                 "SIMPLE TABLE", "USER TABLE", "TABLE WITH PAGES", "DIFFERENT ELEMENTS", "PERFORMANCE"));
     }
 
+    @Step("Open 'Different Elements' page")
     public void openDiffElementsPage() {
         refToDiffElementsPage.click();
     }
 
+    @Step("Open 'Dates' page")
     public void openDatesPage() {
         serviceDropDown.click();
         refToDatesPage.click();
