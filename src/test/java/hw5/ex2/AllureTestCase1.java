@@ -1,12 +1,15 @@
-package hw5;
+package hw5.ex2;
 
 import homework.hw4.base.HomeWork4Base;
 import homework.hw4.pageObjects.DifferentElementsPage;
 import homework.hw4.pageObjects.HomePageSelenide;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import homework.hw5.listeners.AllureAttachmentListener;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 import static homework.hw4.enums.CheckBoxes.WATER;
 import static homework.hw4.enums.CheckBoxes.WIND;
@@ -17,7 +20,10 @@ import static homework.hw4.enums.Users.PITER_CHAILOVSKII;
 /**
  * Created by Mikhail on 31.05.2018
  */
-public class HW4FailedTest extends HomeWork4Base {
+@Feature("Different elements page test")
+@Story("Check interface and content")
+@Listeners({AllureAttachmentListener.class})
+public class AllureTestCase1 extends HomeWork4Base {
 
     private DifferentElementsPage differentElementsPage;
     private HomePageSelenide homePageSelenide;
@@ -31,10 +37,10 @@ public class HW4FailedTest extends HomeWork4Base {
     @Test(description = "Test 'Different Elements' page content")
     public void testDiffElementsButtonsAndLogRows() {
         //1. Open test site
-        open("https://epam.github.io/JDI/index.html");
+        homePageSelenide.openSite();
 
         //2. Assert browser title
-        homePageSelenide.checkHomePageTitle("Home Page");
+        homePageSelenide.checkHomePageTitle();
 
         //3. Perform login.
         homePageSelenide.login(PITER_CHAILOVSKII);
@@ -69,8 +75,8 @@ public class HW4FailedTest extends HomeWork4Base {
 
         //13. Assert that for each checkbox there is an individual log row
         // and value is corresponded to the status of checkbox. 
-        differentElementsPage.checkLogRowsForCheckbox(1, WIND, true);
         differentElementsPage.checkLogRowsForCheckbox(2, WATER, true);
+        differentElementsPage.checkLogRowsForCheckbox(1, WIND, true);
 
         //14. Select radio
         differentElementsPage.selectRadio(SELEN);
@@ -90,7 +96,7 @@ public class HW4FailedTest extends HomeWork4Base {
 
         //19. Assert that for each checkbox there is an individual log row
         // and value is corresponded to the status of checkbox. 
+        differentElementsPage.checkLogRowsForCheckbox(2, WATER, false);
         differentElementsPage.checkLogRowsForCheckbox(1, WIND, false);
-        differentElementsPage.checkLogRowsForCheckbox(2, WATER, true); //'false' is right
     }
 }
