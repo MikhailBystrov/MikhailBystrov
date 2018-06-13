@@ -16,7 +16,7 @@ import static homework.hw5.enums.Users.PITER_CHAILOVSKII;
 /**
  * Created by Mikhail
  */
-@Feature("Different elements page")
+@Feature("Dates page")
 @Story("Check slider and log rows working capacity")
 @Listeners({AllureAttachmentListener.class})
 public class AllureTestCase2 extends HomeWork5Base {
