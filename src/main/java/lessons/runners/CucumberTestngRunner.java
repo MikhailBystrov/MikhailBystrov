@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeSuite;
  * Created by Danila_Morokov on 5/30/2018.
  */
 
-@CucumberOptions(features = "src/test/java/lesson6", glue = "pageObjects")
+@CucumberOptions(features = "src/test/java/lesson6", glue = "homework/hw6/pageObjects")
 public class CucumberTestngRunner extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
